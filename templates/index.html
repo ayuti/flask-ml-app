@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Price Prediction</title>
+</head>
+<body>
+    <h2>Predict Crypto Price</h2>
+    <form method="post">
+        <label>Market Cap:</label><br>
+        <input type="number" name="market_cap" step="any" required><br><br>
+
+        <label>Total Volume:</label><br>
+        <input type="number" name="total_volume" step="any" required><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Prediction: ${{ prediction | round(2) }}</h3>
+    {% endif %}
+</body>
+</html>
